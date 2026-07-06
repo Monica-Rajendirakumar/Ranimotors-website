@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-heroRed: #E30613;
+  --color-heroDark: #080808;
+  --color-heroCard: #121212;
+  --color-heroBorder: #262626;
+  --color-heroMuted: #999999;
+  
+  --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --shadow-red-glow: 0 0 20px rgba(227, 6, 19, 0.15);
+  --shadow-red-glow-strong: 0 0 30px rgba(227, 6, 19, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-heroDark text-white font-inter overflow-x-hidden antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E30613;
+}
+
+/* Custom animations and effects */
+.text-stroke-red {
+  -webkit-text-stroke: 1px #E30613;
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+/* Smoke effect container */
+.smoke-container {
+  pointer-events: none;
+  filter: blur(10px);
+  opacity: 0.15;
+}
+
+/* Showroom floor reflection overlay */
+.floor-reflection {
+  background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.4) 50%, rgba(8, 8, 8, 0) 100%);
+  pointer-events: none;
+}
