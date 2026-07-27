@@ -76,7 +76,7 @@ export default function BikeDetails() {
   }
 
   const whatsappMessage = `Hi Rani Motors, I am interested in buying the ${bike.name} (${selectedColor || 'standard color'}). Please send me details about on-road pricing, finance options, and availability.`;
-  const whatsappUrl = `https://wa.me/918938822283?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/919994727444?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="bg-heroDark min-h-screen pt-28 pb-20 px-4 md:px-8">
