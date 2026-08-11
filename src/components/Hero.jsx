@@ -9,14 +9,14 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-full min-h-[100vh] bg-heroDark overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none">
+      <section className="relative w-full min-h-[55vh] sm:min-h-[100vh] bg-heroDark overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none">
         {/* Full Showcase Building Background Image (Image 2) */}
-        <div className="relative w-full h-[100vh] min-h-[650px] flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-[55vh] sm:h-[100vh] min-h-[380px] sm:min-h-[650px] flex items-center justify-center overflow-hidden bg-black">
           {/* Main Full-Bleed Showroom Image */}
           <img
             src="/assets/rani-motors-storefront.jpg.png"
             alt="Rani Motors Showroom Building"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain sm:object-cover object-center"
           />
 
           {/* Top subtle vignette overlay for crisp header navigation contrast */}

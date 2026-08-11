@@ -63,24 +63,19 @@ export default function Offers() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-16 rounded-2xl overflow-hidden border border-heroRed/30 shadow-[0_0_30px_rgba(227,6,19,0.15)] max-w-5xl mx-auto relative group"
+          className="mb-16 rounded-2xl overflow-hidden border border-heroRed/30 shadow-[0_0_30px_rgba(227,6,19,0.15)] max-w-5xl mx-auto flex flex-col items-center bg-zinc-950 p-3 sm:p-4"
         >
           <img 
             src="/assets/aadi-offer.jpg" 
             alt="Hero Aadi Special Offer" 
-            className="w-full h-auto object-contain bg-white group-hover:scale-[1.02] transition-transform duration-500"
+            className="w-full h-auto object-contain rounded-xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-          <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-            <div>
-              <p className="text-white font-outfit font-black text-xl sm:text-2xl drop-shadow-md tracking-wide">AADI SPECIAL OFFER</p>
-              <p className="text-gray-200 font-inter text-sm drop-shadow-md">Cash bonus upto ₹3000, low down payment from ₹9999 & more!</p>
-            </div>
+          <div className="w-full pt-4 flex justify-center">
             <button 
               onClick={() => window.open('https://wa.me/919994827444?text=Hi%20Rani%20Motors,%20I%20am%20interested%20in%20the%20Aadi%20Special%20Offer.', '_blank')}
-              className="bg-heroRed hover:bg-red-700 text-white font-outfit text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-sm shadow-xl transition-all hover:-translate-y-0.5 shrink-0"
+              className="bg-heroRed hover:bg-red-700 text-white font-outfit text-xs sm:text-sm font-bold tracking-widest uppercase px-8 py-3.5 rounded-lg shadow-xl transition-all hover:-translate-y-0.5"
             >
-              Claim Offer
+              Claim Offer on WhatsApp
             </button>
           </div>
         </motion.div>
