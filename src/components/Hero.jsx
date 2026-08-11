@@ -39,13 +39,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="bg-black/60 backdrop-blur-md border border-white/10 group-hover:border-heroRed/50 px-6 py-3 rounded-full flex items-center gap-3 text-white transition-all duration-300 shadow-2xl group-hover:scale-105"
+              className="bg-black/60 backdrop-blur-md border border-white/10 group-hover:border-heroRed/50 px-4 sm:px-6 py-3 rounded-full flex items-center justify-center gap-2 sm:gap-3 text-white transition-all duration-300 shadow-2xl group-hover:scale-105 max-w-[90%] sm:max-w-none text-center"
             >
-              <div className="w-2.5 h-2.5 rounded-full bg-heroRed animate-pulse" />
-              <span className="font-outfit text-xs font-bold uppercase tracking-widest text-gray-200 group-hover:text-white">
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-heroRed animate-pulse shrink-0" />
+              <span className="font-outfit text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-200 group-hover:text-white truncate sm:whitespace-normal">
                 Rani Motors — Walajapet Showroom
               </span>
-              <ArrowRight className="w-4 h-4 text-heroRed group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-heroRed group-hover:translate-x-1 transition-transform shrink-0" />
             </motion.div>
           </div>
         </div>

@@ -58,6 +58,33 @@ export default function Offers() {
           </motion.p>
         </div>
 
+        {/* Featured Aadi Offer Banner */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mb-16 rounded-2xl overflow-hidden border border-heroRed/30 shadow-[0_0_30px_rgba(227,6,19,0.15)] max-w-5xl mx-auto relative group"
+        >
+          <img 
+            src="/assets/aadi-offer.jpg" 
+            alt="Hero Aadi Special Offer" 
+            className="w-full h-auto object-contain bg-white group-hover:scale-[1.02] transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <div>
+              <p className="text-white font-outfit font-black text-xl sm:text-2xl drop-shadow-md tracking-wide">AADI SPECIAL OFFER</p>
+              <p className="text-gray-200 font-inter text-sm drop-shadow-md">Cash bonus upto ₹3000, low down payment from ₹9999 & more!</p>
+            </div>
+            <button 
+              onClick={() => window.open('https://wa.me/919994827444?text=Hi%20Rani%20Motors,%20I%20am%20interested%20in%20the%20Aadi%20Special%20Offer.', '_blank')}
+              className="bg-heroRed hover:bg-red-700 text-white font-outfit text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-sm shadow-xl transition-all hover:-translate-y-0.5 shrink-0"
+            >
+              Claim Offer
+            </button>
+          </div>
+        </motion.div>
+
         {/* Offers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offers.map((offer, index) => {

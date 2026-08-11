@@ -11,7 +11,7 @@ import Offers from './pages/Offers';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-heroDark text-white selection:bg-heroRed selection:text-white">
+      <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden bg-heroDark text-white selection:bg-heroRed selection:text-white">
         {/* Fixed Global Glassmorphism Header */}
         <Navbar />
         
