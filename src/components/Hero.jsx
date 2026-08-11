@@ -22,27 +22,41 @@ export default function Hero() {
           {/* Top subtle vignette overlay for crisp header navigation contrast */}
           <div className="absolute top-0 inset-x-0 h-28 sm:h-40 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none z-10" />
 
-          {/* Bottom Atmospheric Smoke / Fog Transition Layer (Matching Image 2 bottom mist) */}
-          <div className="absolute bottom-0 inset-x-0 h-2/3 sm:h-72 bg-gradient-to-t from-heroDark via-heroDark/80 to-transparent pointer-events-none z-10" />
+          {/* Bottom Atmospheric Smoke / Fog Transition Layer */}
+          <div className="absolute bottom-0 inset-x-0 h-[80%] sm:h-[600px] bg-gradient-to-t from-heroDark via-heroDark/90 to-transparent pointer-events-none z-10" />
 
           {/* Subtle Red Ambient Lighting Glow Behind Smoke */}
-          <div className="absolute bottom-0 inset-x-0 h-40 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-heroRed/20 via-transparent to-transparent pointer-events-none z-10" />
+          <div className="absolute bottom-0 inset-x-0 h-48 sm:h-72 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-heroRed/20 via-transparent to-transparent pointer-events-none z-10" />
 
-          {/* Interactive Trigger Overlay - Click building to view showroom details */}
-          <div 
-            onClick={() => setShowroomModal(true)}
-            className="absolute inset-0 z-20 cursor-pointer group flex items-end justify-center pb-12"
-            title="Click to view Showroom Info"
-          >
-            {/* Showroom Quick Badge */}
+          {/* Content & Trigger Overlay */}
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-8 sm:pb-12 pointer-events-none">
+            
+            {/* New Dealership Intro Section */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-center px-4 max-w-3xl mb-6 sm:mb-10 pointer-events-auto"
+            >
+              <h2 className="font-outfit text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-2 sm:mb-4 drop-shadow-lg">
+                <span className="text-heroRed">Your Ride.</span> Our Commitment.
+              </h2>
+              <p className="font-inter text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl mx-auto drop-shadow mb-4">
+                Your trusted Hero MotoCorp dealership in Walajapet.<br className="hidden sm:block" />
+                Discover the latest Hero motorcycles and scooters, genuine spare parts, professional service, and exclusive offers.
+              </p>
+            </motion.div>
+
+            {/* Showroom Quick Badge */}
+            <motion.div 
+              onClick={() => setShowroomModal(true)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="bg-black/60 backdrop-blur-md border border-white/10 group-hover:border-heroRed/50 px-4 sm:px-6 py-3 rounded-full flex items-center justify-center gap-2 sm:gap-3 text-white transition-all duration-300 shadow-2xl group-hover:scale-105 max-w-[90%] sm:max-w-none text-center"
+              className="bg-black/60 backdrop-blur-md border border-white/10 hover:border-heroRed/50 px-4 sm:px-6 py-3 rounded-full flex items-center justify-center gap-2 sm:gap-3 text-white transition-all duration-300 shadow-2xl hover:scale-105 max-w-[90%] sm:max-w-none text-center cursor-pointer pointer-events-auto group"
             >
               <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-heroRed animate-pulse shrink-0" />
-              <span className="font-outfit text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-200 group-hover:text-white truncate sm:whitespace-normal">
+              <span className="font-outfit text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-200 group-hover:text-white truncate sm:whitespace-normal transition-colors">
                 Rani Motors — Walajapet Showroom
               </span>
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-heroRed group-hover:translate-x-1 transition-transform shrink-0" />
