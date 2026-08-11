@@ -9,24 +9,24 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-full min-h-[55vh] sm:min-h-[100vh] bg-heroDark overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none">
+      <section className="relative w-full bg-heroDark overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none">
         {/* Full Showcase Building Background Image (Image 2) */}
-        <div className="relative w-full h-[55vh] sm:h-[100vh] min-h-[380px] sm:min-h-[650px] flex items-center justify-center overflow-hidden bg-black">
+        <div className="relative w-full h-[65vh] sm:h-[100vh] min-h-[420px] sm:min-h-[650px] flex items-start sm:items-center justify-center overflow-hidden bg-heroDark">
           {/* Main Full-Bleed Showroom Image */}
           <img
             src="/assets/rani-motors-storefront.jpg.png"
             alt="Rani Motors Showroom Building"
-            className="w-full h-full object-contain sm:object-cover object-center"
+            className="w-full h-auto sm:h-full max-h-full object-contain sm:object-cover object-top sm:object-center mt-16 sm:mt-0"
           />
 
           {/* Top subtle vignette overlay for crisp header navigation contrast */}
-          <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none z-10" />
+          <div className="absolute top-0 inset-x-0 h-28 sm:h-40 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none z-10" />
 
           {/* Bottom Atmospheric Smoke / Fog Transition Layer (Matching Image 2 bottom mist) */}
-          <div className="absolute bottom-0 inset-x-0 h-48 sm:h-72 bg-gradient-to-t from-heroDark via-heroDark/70 to-transparent pointer-events-none z-10" />
+          <div className="absolute bottom-0 inset-x-0 h-2/3 sm:h-72 bg-gradient-to-t from-heroDark via-heroDark/80 to-transparent pointer-events-none z-10" />
 
           {/* Subtle Red Ambient Lighting Glow Behind Smoke */}
-          <div className="absolute bottom-0 inset-x-0 h-32 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-heroRed/15 via-transparent to-transparent pointer-events-none z-10" />
+          <div className="absolute bottom-0 inset-x-0 h-40 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-heroRed/20 via-transparent to-transparent pointer-events-none z-10" />
 
           {/* Interactive Trigger Overlay - Click building to view showroom details */}
           <div 
